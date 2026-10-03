@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashy Blog</title>
+</head>
+<body>
+    <header>
+        <h1><a href="">Ashy Blog</a></h1>
+    </header>
+
+    {{post}}
+
+    {%for posts in post %}
+    {{post}}
+    {%endfor%}
+
+    {%for posts in post%}
+    <article>
+        <time>published: {{posts.published_date}}</time>
+        <h2><a href="">{{posts.title}}</a></h2>
+        <p>{{posts.text}}</p>
+    </article>
+    {%endfor%}
+
+    <article>
+        <time>published: 02.10.2026, 01:49</time>
+        <h2><a href="">My First Post</a></h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, modi. Expedita assumenda numquam eaque ratione omnis quibusdam quo! Pariatur illo ex quia, cumque quos laboriosam? Rem vitae iste voluptas quas?
+        Natus aut optio, explicabo similique ab quibusdam consequuntur dolor tempore facilis voluptate ullam deleniti doloribus? Aut, quisquam in quasi et qui, repellendus numquam adipisci sunt officiis, exercitationem ipsa? Optio, quam.
+        Rerum laborum porro animi ab, ipsam quasi sapiente magnam qui adipisci autem, dignissimos, atque magni vel dolore quis dolorum itaque? Id dolor quasi alias voluptatum excepturi at impedit similique nisi.
+        Esse maiores facere corporis eligendi magnam numquam porro? Quos tempora dicta atque, id error soluta, velit nulla reprehenderit, distinctio ducimus ipsa voluptatem suscipit deserunt vel aperiam at necessitatibus. Consequatur, necessitatibus.
+        Commodi esse autem voluptatum, incidunt voluptatem consectetur magnam. Quam error deserunt atque mollitia? Sint accusamus quasi sequi molestiae adipisci laudantium repudiandae, nobis vero deserunt, ratione corporis odio quisquam? Earum, facere.</p>
+    </article>
+
+    <article>
+        <time>published: 02.10.2026, 01:56</time>
+        <h2><a href="">My Second Post</a></h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque quasi suscipit, voluptatum dolores error dicta aliquid eos sequi praesentium temporibus, dolorum officia fuga quaerat. Deserunt cumque soluta reprehenderit aliquid totam?
+        Voluptatem rem repellat quasi similique expedita voluptates dicta, perferendis reiciendis, vel porro modi reprehenderit ab tempore veniam vero iste nisi nulla nemo voluptas commodi. Aliquid eveniet perferendis laudantium tempore sapiente.
+        Voluptas magni repudiandae tempore at ducimus animi officia quasi blanditiis perspiciatis quam. Molestiae fugiat sunt expedita saepe qui voluptatum neque, id laudantium, recusandae facilis deserunt illum velit animi explicabo voluptatibus!
+        Eveniet obcaecati ex minus perferendis fugiat! Ipsum autem harum molestiae cum, sit laborum, quisquam explicabo consectetur tenetur voluptate fugit tempore facilis nesciunt illo unde eius. Sequi harum in obcaecati sint!
+        Suscipit et veniam quibusdam nisi quia ipsam soluta voluptatibus temporibus ratione praesentium? Eius laboriosam reiciendis ut. Pariatur distinctio similique quis placeat reprehenderit. Illum reprehenderit neque nulla, praesentium eaque fuga et.</p>
+    </article>
+</body>
+</html>
