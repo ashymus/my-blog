@@ -1,30 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashy Blog</title>
-</head>
-<body>
-    <header>
-        <h1><a href="">Ashy Blog</a></h1>
-    </header>
-
-    {{post}}
-
-    {%for posts in post %}
-    {{post}}
-    {%endfor%}
-
-    {%for posts in post%}
-    <article>
-        <time>published: {{posts.published_date}}</time>
-        <h2><a href="">{{posts.title}}</a></h2>
-        <p>{{posts.text}}</p>
-    </article>
-    {%endfor%}
-
-    <article>
+ {% extends 'blog/base.html' %}
+ 
+            {% block content %}
+                    {%for posts in post%}
+                    <article class="post">
+                        <time>published: {{posts.published_date}}</time>
+                        <h2><a href="{% url 'post_detail' pk=posts.pk %}">{{posts.title}}</a></h2>
+                        <p>{{posts.text|linebreaksbr}}</p>
+                    </article>
+                    {%endfor%}
+            {% endblock %}
+ 
+    <!--<article>
         <time>published: 02.10.2026, 01:49</time>
         <h2><a href="">My First Post</a></h2>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, modi. Expedita assumenda numquam eaque ratione omnis quibusdam quo! Pariatur illo ex quia, cumque quos laboriosam? Rem vitae iste voluptas quas?
@@ -42,6 +28,6 @@
         Voluptas magni repudiandae tempore at ducimus animi officia quasi blanditiis perspiciatis quam. Molestiae fugiat sunt expedita saepe qui voluptatum neque, id laudantium, recusandae facilis deserunt illum velit animi explicabo voluptatibus!
         Eveniet obcaecati ex minus perferendis fugiat! Ipsum autem harum molestiae cum, sit laborum, quisquam explicabo consectetur tenetur voluptate fugit tempore facilis nesciunt illo unde eius. Sequi harum in obcaecati sint!
         Suscipit et veniam quibusdam nisi quia ipsam soluta voluptatibus temporibus ratione praesentium? Eius laboriosam reiciendis ut. Pariatur distinctio similique quis placeat reprehenderit. Illum reprehenderit neque nulla, praesentium eaque fuga et.</p>
-    </article>
+    </article>-->
 </body>
 </html>
